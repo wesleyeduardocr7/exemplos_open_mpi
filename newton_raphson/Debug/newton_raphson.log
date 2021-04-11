@@ -1,6 +1,7 @@
 ﻿  newton_raphson.cpp
-C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(18,29): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(53,20): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(60,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(52,23): warning C4101: 'raiz': unreferenced local variable
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(20,30): warning C4305: 'initializing': truncation from '__int64' to 'float'
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(31,20): warning C4244: '=': conversion from 'clock_t' to 'float', possible loss of data
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(57,20): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(64,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(56,23): warning C4101: 'raiz': unreferenced local variable
   newton_raphson.vcxproj -> C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\Debug\newton_raphson.exe
