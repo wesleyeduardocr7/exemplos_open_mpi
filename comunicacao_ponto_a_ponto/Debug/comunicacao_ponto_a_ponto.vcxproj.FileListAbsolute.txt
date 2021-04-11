@@ -1,0 +1,1 @@
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\comunicacao_ponto_a_ponto\Debug\comunicacao_ponto_a_ponto.exe
