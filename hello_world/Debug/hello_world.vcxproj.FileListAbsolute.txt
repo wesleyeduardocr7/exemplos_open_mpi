@@ -1,0 +1,1 @@
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\hello_world\Debug\hello_world.exe
