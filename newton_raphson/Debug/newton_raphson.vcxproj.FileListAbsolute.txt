@@ -1,0 +1,1 @@
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\Debug\newton_raphson.exe
