@@ -1,5 +1,5 @@
 ﻿  newton_raphson.cpp
-C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(57,20): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(64,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(56,23): warning C4101: 'raiz': unreferenced local variable
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(11,20): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(39,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\newton_raphson.cpp(10,23): warning C4101: 'raiz': unreferenced local variable
   newton_raphson.vcxproj -> C:\Users\Wesley Eduardo\Documents\exemplos_open_mpi\newton_raphson\Debug\newton_raphson.exe

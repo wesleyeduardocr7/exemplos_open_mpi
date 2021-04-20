@@ -6,8 +6,13 @@
 
 int main(int argc, char* argv[]) {
 
-	float raiz_newton_raphson(float x0);
-		
+	int i = 0, qtd_iteracoes = 1;
+	float xn = 0.0, fxn, raiz;
+	float eps = 1.0E-6;
+	float f(float);
+	float df(float);
+	fxn = 1.0;
+
 	int myrank;
 	MPI_Status status;
 
@@ -15,8 +20,8 @@ int main(int argc, char* argv[]) {
 
 	MPI_Comm_rank(MPI_COMM_WORLD, &myrank);
 
-	if (myrank == 0){
-		float x0 = 1000000000;	
+	if (myrank == 0) {
+		float x0 = 1000000000;
 		printf("\nX0 = %f\n", x0);
 		MPI_Send(&x0, 1, MPI_FLOAT, 1, 0, MPI_COMM_WORLD);
 	}
@@ -24,13 +29,20 @@ int main(int argc, char* argv[]) {
 	if (myrank == 1) {
 
 		float x0_recv = 0.;
-		
-		MPI_Recv(&x0_recv, 1, MPI_FLOAT, 0, 0, MPI_COMM_WORLD,&status);
-		
+
+		MPI_Recv(&x0_recv, 1, MPI_FLOAT, 0, 0, MPI_COMM_WORLD, &status);
+
 		double t_initial = MPI_Wtime();
-		float xn = raiz_newton_raphson(x0_recv);
+
+		for (i; f(xn) > eps; i++) {
+			xn = x0_recv - f(x0_recv) / df(x0_recv);
+			fxn = fabs(f(xn));
+			qtd_iteracoes++;
+			x0_recv = xn;
+		}
 		double t_final = MPI_Wtime() - t_initial;
-		
+
+		printf("\nConvergiu Apos  %d Iteracoes.\n", qtd_iteracoes);
 		printf("\nTempo de execucao: %lf", t_final / ((CLOCKS_PER_SEC / 1000)));
 
 		MPI_Send(&xn, 1, MPI_FLOAT, 2, 0, MPI_COMM_WORLD);
@@ -47,28 +59,6 @@ int main(int argc, char* argv[]) {
 	MPI_Finalize();
 	return 0;
 }
-
-
-float raiz_newton_raphson(float x0) {
-		
-	int i = 0,qtd_iteracoes = 1;
-	float xn = 0.0, fxn, raiz;
-	float eps = 1.0E-6;
-	float f(float);
-	float df(float);
-	fxn = 1.0;
-
-	for (i; f(xn) > eps; i++) {
-		xn = x0 - f(x0) / df(x0);
-		fxn = fabs(f(xn));
-		qtd_iteracoes++;
-		x0 = xn;
-	}
-
-	printf("\nConvergiu Apos  %d Iteracoes.\n", qtd_iteracoes);
-	return xn;
-}
-
 
 float f(float x) {
 	return (x * x) - 5 * x + 6;
